@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<h2 id="heading">Welcome Students</h2>
+
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeColor()">Change Text Color</button>
+<button onclick="showMessage()">Show Alert</button>
+<button onclick="changeBackground()">Change Background</button>
+
+<script>
+function changeText() {
+   document.getElementById("heading").textContent = "Text Changed!";
+}
+
+function changeColor() {
+   document.getElementById("heading").style.color = "blue";
+}
+
+function showMessage() {
+   alert("Button Clicked Successfully!");
+}
+
+function changeBackground() {
+   document.body.style.backgroundColor = "lightyellow";
+}
+</script>
+
+</body>
+</html>
+

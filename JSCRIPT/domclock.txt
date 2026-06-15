@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Clock</title>
+</head>
+<body>
+  <h1>DOM Clock</h1>
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      let h = now.getHours();
+      let m = now.getMinutes();
+      let s = now.getSeconds();
+
+      // formatting
+      h = h < 10 ? "0" + h : h;
+      m = m < 10 ? "0" + m : m;
+      s = s < 10 ? "0" + s : s;
+
+      // ❗ Direct DOM manipulation
+      document.getElementById("clock").innerText = h + ":" + m + ":" + s;
+    }
+
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
